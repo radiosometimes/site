@@ -44,7 +44,7 @@
       $file = '/var/www/radiosometimes/data/data.json';
       $data = json_decode(file_get_contents($file), true);
       if ($data['radio'] === 'off') echo '<h1 id="off">There\'s no radio. Come back some other time.</h1>';
-      else if ($data['radio'] === 'on') echo '<h1>There\'s radio. Listen!</h1><audio controls><source src="http://104.141.73.128:8000/occasional" type="audio/mpeg"></audio></div>';
+      else if ($data['radio'] === 'on') echo '<h1>There\'s radio. Listen!</h1><audio controls><source src="http://104.131.73.128:8000/occasional" type="audio/mpeg"></audio></div>';
       if ($data['video'] === 'on') echo '<div><h1>There\'s TV. <a target="_external" href="'.$data['video_link'].'">Watch!</a></h1></div>';
       if ($data['img_src'] != '') echo '<figure><img src="'.$data['img_src'].'" alt="Smiley face"><figcaption>'.$data['caption'].'</figcaption></figure>';
     ?>
